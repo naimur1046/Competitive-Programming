@@ -12,6 +12,19 @@ public:
      }
 };
 
+
+// Inset a value on the Head
+
+
+void insertAtHead(node *&n, int val)
+{
+     node *Nod = new node(val);
+     Nod->next = n;
+     n = Nod;
+}
+
+// Insert a value on the Tail
+
 void insetAtTail(node *&n, int val)
 {
      node *temp = n;
@@ -39,5 +52,6 @@ int main()
      insetAtTail(nod, 15);
      insetAtTail(nod, 1);
      insetAtTail(nod, 10);
+     insertAtHead(nod, 50);
      display(nod);
 }
