@@ -12,9 +12,7 @@ public:
      }
 };
 
-
 // Inset a value on the Head
-
 
 void insertAtHead(node *&n, int val)
 {
@@ -37,6 +35,22 @@ void insetAtTail(node *&n, int val)
      temp->next = new node(val);
 }
 
+// Search an Element
+
+bool search(node *&n, int key)
+{
+     node *temp = n;
+     while (temp != NULL)
+     {
+          if (temp->data == key)
+               return true;
+          temp = temp->next;
+     }
+     return false;
+}
+
+// Display all elements in the linked list
+
 void display(node *&n)
 {
      node *temp = n;
@@ -46,6 +60,8 @@ void display(node *&n)
           temp = temp->next;
      }
 }
+
+
 int main()
 {
      node *nod = new node(5);
