@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 using namespace std;
 class node
@@ -76,6 +75,17 @@ void deletion(node *&n, int key)
      delete todelete;
 }
 
+// Delete an Element from the head
+
+void deleteElementHead(node *&n)
+{
+     if (n == NULL)
+          return;
+     node *todelete = n;
+     n = n->next;
+     delete todelete;
+}
+
 int main()
 {
      node *nod = new node(5);
@@ -85,5 +95,6 @@ int main()
      insertAtHead(nod, 50);
      display(nod);
      deletion(nod, 10);
+     deleteElementHead(nod);
      display(nod);
 }
