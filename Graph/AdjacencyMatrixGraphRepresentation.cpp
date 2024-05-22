@@ -8,7 +8,7 @@ int main()
 {
      int n, m;
      cin >> n >> m;
-     int graph[n + 1][n + 1];
+     bool graph[n + 1][n + 1];
      for (int i = 0; i < n; i++)
      {
           for (int j = 0; j < n; j++)
@@ -21,5 +21,6 @@ int main()
           int v1, v2;
           cin >> v1 >> v2;
           graph[v1][v2] = 1;
+          graph[v2][v1]=1;
      }
 }
