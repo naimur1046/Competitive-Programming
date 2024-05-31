@@ -14,14 +14,29 @@ struct Node
      }
 };
 
-
+void PreOrder(Node *Root)
+{
+     if (Root == NULL)
+          return;
+     cout << Root->data << endl;
+     PreOrder(Root->Left);
+     PreOrder(Root->Right);
+}
 void InOrder(Node *Root)
 {
      if (Root == NULL)
           return;
-     PreOrder(Root->Left);
+     InOrder(Root->Left);
      cout << Root->data << endl;
-     PreOrder(Root->Right);
+     InOrder(Root->Right);
+}
+void PostOrder(Node *Root)
+{
+     if(Root==NULL)
+     return;
+     PostOrder(Root->Left);
+     PostOrder(Root->Right);
+     cout<< Root->data << endl;
 }
 
 int main()
