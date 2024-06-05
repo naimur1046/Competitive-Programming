@@ -13,7 +13,7 @@ int func(int i)
           if (nums[j] < nums[i])
                res = max(func(j) + 1, res);
      }
-     return res;
+     return dp[i]= res;
 }
 int main()
 {
