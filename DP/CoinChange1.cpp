@@ -19,7 +19,7 @@ int coinChange(int amount)
 }
 int main()
 {
-     memset(coins, -1, N);
+     memset(dp, -1, N);
      int n;
      cin >> n;
      for (int i = 0; i < n; i++)
